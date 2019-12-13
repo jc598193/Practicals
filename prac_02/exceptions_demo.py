@@ -8,5 +8,5 @@ except ValueError:
 except ZeroDivisionError:
     print("Cannot divide by zero!")
 print("Finished.")
-1. when input is not a number
-2. when denominator is 0
+# 1. when input is not a number
+# 2. when denominator is 0
