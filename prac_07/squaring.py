@@ -21,18 +21,14 @@ class SquareNumberApp(App):
         self.root = Builder.load_file('squaring.kv')
         return self.root
 
-    def handle_calculate(self):
+    def handle_calculate(self, value):
         """ handle calculation (could be button press or other call), output result to label widget """
-        value = self.handle_input()
-        result = value ** 2
-        self.root.ids.output_label.text = str(result)
-
-    def handle_input(self):
         try:
-            value = float(self.root.ids.input_number.text)
-            return value
+            result = float(value) ** 2
+            self.root.ids.output_label.text = str(result)
         except ValueError:
-            return 0
+            self.root.ids.message.text = 'Please enter a number'
+            self.root.ids.output_label.text = ''
 
 
 SquareNumberApp().run()
