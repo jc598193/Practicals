@@ -6,6 +6,7 @@ Lindsay Ward, IT@JCU
 
 from kivy.app import App
 from kivy.lang import Builder
+from kivy.app import StringProperty
 
 __author__ = 'Lindsay Ward'
 
@@ -14,6 +15,8 @@ MILES_TO_KM = 1.60934
 
 class MilesConverterApp(App):
     """ MilesConverterApp is a Kivy App for converting miles to kilometres """
+    output = StringProperty()
+
     def build(self):
         """ build the Kivy app from the kv file """
         self.title = "Convert Miles to Kilometres"
@@ -24,7 +27,7 @@ class MilesConverterApp(App):
         """ handle calculation (could be button press or other call), output result to label widget """
         value = self.get_validated_miles()
         result = value * MILES_TO_KM
-        self.root.ids.output_label.text = str(result)
+        self.output = str(result)
 
     def handle_increment(self, change):
         """
