@@ -4,6 +4,7 @@ Demos of various os module examples
 """
 import shutil
 import os
+import re
 
 
 def main():
@@ -41,7 +42,12 @@ def main():
 
 def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
-    new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
+    new_list = re.findall('[a-zA-Z][^A-Z]*', filename)
+    name = ''
+    for each in new_list:
+        name += '{} '.format(each)
+    name = name[:-1]
+    new_name = name.replace(" ", "_").replace(".TXT", ".txt")
     return new_name
 
 
