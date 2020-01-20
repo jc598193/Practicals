@@ -36,7 +36,7 @@ class MilesConverterApp(App):
         """
         value = self.get_validated_miles() + change
         self.root.ids.input_miles.text = str(value)
-        self.handle_calculate()
+        # self.handle_calculate()
 
     def get_validated_miles(self):
         """

@@ -1,5 +1,5 @@
 # Import Car class
-from prac_06.car import Car
+from car import Car
 
 
 def main():

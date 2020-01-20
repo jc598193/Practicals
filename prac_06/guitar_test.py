@@ -1,4 +1,4 @@
-from prac_06.guitars import Guitar
+from guitars import Guitar
 
 
 def main():
@@ -7,6 +7,7 @@ def main():
     print('{} get_age - Expected 96. Got {}'.format(gibson.name, gibson.get_age()))
     print('{} is_vintage() - Expected True. Got {}'.format(gibson.name, gibson.is_vintage()))
     print(gibson)
+
 
 if __name__ == '__main__':
     main()

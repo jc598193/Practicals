@@ -1,5 +1,5 @@
 # Import Class
-from prac_06.programming_language import ProgrammingLanguage
+from programming_language import ProgrammingLanguage
 
 
 def main():
